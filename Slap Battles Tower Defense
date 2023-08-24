@@ -1,0 +1,42 @@
+-- Zyle Hub powered by Sirius. Warning : Do not copy and re-name my script without my permission
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+
+local Window = Rayfield:CreateWindow({
+	Name = "Zyle Hub",
+	LoadingTitle = "Zyle Hub",
+	LoadingSubtitle = "By Unon",
+	ConfigurationSaving = {
+		Enabled = true,
+		FileName = "Zyle Hub"
+	}
+})
+
+local Tab = Window:CreateTab("Main")
+local Section = Tab:CreateSection("Section 1")
+
+local Paragraph = Tab:CreateParagraph({Title = "Info", Content = "Gives U The Admin Gui"})
+
+local Button = Tab:CreateButton({
+	Name = "Admin Shop",
+	Callback = function()
+local script = Instance.new('LocalScript', AdminShop)
+
+game:GetService("Players").LocalPlayer.PlayerGui.adminSecrets.OpenAdminShop.Visible = true
+
+	end,
+})
+
+
+local Paragraph = Tab:CreateParagraph({Title = "Info", Content = "Gives U A Mob Spawner USE IN GAME NOT MAIN GAME"})
+
+local Button = Tab:CreateButton({
+	Name = "MobSpawn",
+	Callback = function()
+
+local script = Instance.new('LocalScript', MobSpawn)
+game:GetService("Players").LocalPlayer.PlayerGui.GameGui.buttons.Open.Visible = true
+
+
+	end,
+})
